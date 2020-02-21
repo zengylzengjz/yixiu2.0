@@ -1,0 +1,110 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/order_details/index",
+    "pages/user_sgin/index",
+    "pages/user/user",
+    "pages/user_get_coupon/index",
+    "pages/order_confirm/index",
+    "pages/user_coupon/index",
+    "pages/user_address_list/index",
+    "pages/news_list/index",
+    "pages/user_phone/index",
+    "pages/user_pwd_edit/index",
+    "pages/user_vip/index",
+    "pages/user_spread_money/index",
+    "pages/user_integral/index",
+    "pages/user_bill/index",
+    "pages/user_money/index",
+    "pages/user_spread_user/index",
+    "pages/user_sgin_list/index",
+    "pages/order_list/index",
+    "pages/news_details/index",
+    "pages/promoter-list/index",
+    "pages/promoter-order/index",
+    "pages/cash-audit/index",
+    "pages/user_cash/index",
+    "pages/user_return_list/index",
+    "pages/promotional-items/index",
+    "pages/first-new-product/index",
+    "pages/user_spread_code/index",
+    "pages/user_info/index",
+    "pages/order_pay_status/index",
+    "pages/user_address/index",
+    "pages/order_addcart/order_addcart",
+    "pages/user_payment/index",
+    "components/navbar/index",
+    "components/recommend/index",
+    "components/share-red-packets/index",
+    "components/orderGoods/index",
+    "components/swipers/index",
+    "components/promotionGood/index",
+    "components/productConSwiper/index",
+    "components/userEvaluation/index",
+    "components/coupon-window/index",
+    "components/product-window/index",
+    "components/coupon-list-window/index",
+    "components/address-window/index",
+    "components/machine-window/index",
+    "components/printer-window/index",
+    "components/home/index",
+    "pages/index/addink",
+    "pages/index/repair",
+    "pages/user_printer/index",
+    "pages/user_computer/index",
+    "pages/process/index",
+    "pages/user_printer_detail/index",
+    "pages/user_computer_detail/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/activity",
+      "name": "activity",
+      "pages": [
+        "goods_combination/index",
+        "goods_combination_details/index",
+        "goods_combination_status/index",
+        "goods_seckill_details/index",
+        "goods_seckill/index",
+        "goods_bargain_details/index",
+        "goods_bargain/index",
+        "poster-poster/index",
+        "user_goods_bargain_list/index"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "易修",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#282828",
+    "selectedColor": "#e93323",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/1-001.png",
+        "selectedIconPath": "images/1-002.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/process/index",
+        "iconPath": "images/2-001.png",
+        "selectedIconPath": "images/2-002.png",
+        "text": "进程"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "images/4-001.png",
+        "selectedIconPath": "images/4-002.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

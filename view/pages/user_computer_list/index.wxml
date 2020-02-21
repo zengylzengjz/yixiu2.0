@@ -1,0 +1,45 @@
+
+
+<!-- <navbar parameter='{{parameter}}'></navbar> -->
+<view class='address-management {{addressList.length < 1 && page > 1 ? "fff":""}}'>
+   <view class='line'><image src='/images/line.jpg' wx:if="{{addressList.length}}"></image></view>
+   <radio-group class="radio-group" bindchange="radioChange" wx:if="{{addressList.length}}">
+      <view class='item' wx:for="{{addressList}}" data-index="{{index}}" wx:key>
+          <view class='address'  data-id="{{item.id}}" bindtap='goOrder'>
+            <view class='consignee'>电脑型号：<text class="item2">{{item.com_type}}</text></view>
+            <view class='consignee'>CPU：<text class="item2">{{item.cpu}}</text></view>
+            <view class='consignee'>内存信息：<text class="item2">{{item.memory_size}}</text></view>
+            <view class='consignee'>显卡信息：<text class="item2">{{item.graphics}}</text></view>
+            <view class='consignee'>硬盘信息：<text class="item2">{{item.hd}}</text></view>
+            <view class='consignee'>生产日期：<text class="item2">{{item.pro_date}}</text></view>
+            <view class='consignee'>保修码：<text class="item2">{{item.sn_code}}</text></view>
+
+            
+            
+          </view>
+          <view class='operation acea-row row-between-wrapper'>
+             <radio class="radio" value="{{index}}" checked="{{item.is_default ? true : false}}">
+                <text>设为默认</text>
+             </radio>
+             <view class='acea-row row-middle'>
+             <view data-id="{{item.id}}" bindtap='detailComputer'><text class='iconfont icon-bianji'></text>维修记录</view>
+               <!-- <view data-id="{{item.id}}" bindtap='editComputer'><text class='iconfont icon-bianji' style="margin-left:15px"></text>编辑</view> -->
+               <view data-index="{{index}}" bindtap='delComputer'><text class='iconfont icon-shanchu'></text>删除</view>
+             </view>
+          </view>
+      </view>
+   </radio-group>
+   <view class='loadingicon acea-row row-center-wrapper' wx:if="{{addressList.length}}">
+        <text class='loading iconfont icon-jiazai' hidden='{{loading==false}}'></text>{{loadTitle}}
+     </view>
+   <view class='noCommodity' wx:if="{{addressList.length < 1 && page > 1}}">
+      <view class='pictrue'><image src='/images/noComputer.png'></image></view>
+   </view>
+   <view style='height:120rpx;'></view>
+   <view class='footer acea-row row-between-wrapper'>
+      <view class='addressBnt bg-color'  bindtap='addAddress'>添加新的电脑信息</view>
+      <!-- <text class='iconfont icon-tianjiadizhi'></text> -->
+      <!-- <view class='addressBnt wxbnt' bindtap='getWxAddress'><text class='iconfont icon-weixin2'></text>导入微信地址</view> -->
+   </view>
+</view>
+<authorize bind:onLoadFun="onLoadFun"></authorize>

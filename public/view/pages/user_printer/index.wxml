@@ -1,0 +1,29 @@
+<!--pages/user_printer/index.wxml-->
+<navbar parameter='{{parameter}}'></navbar>
+
+<form bindsubmit="formSubmit" report-submit='true'>
+<view class='addAddress'>
+   <view class='list'>
+
+   
+
+
+
+
+
+      
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>打印机型号：</view>
+          <input type='text' placeholder='请输入打印机型号' name="printer_type" value='{{userPrinter.printer_type}}' placeholder-class='placeholder'></input>
+      </view>
+        
+   </view>
+   <view class='default acea-row row-middle'>
+      <checkbox-group bindchange='ChangeIsDefault'><checkbox checked="{{userAddress.is_default ? true : false }}"/>设置为默认打印机</checkbox-group>
+   </view>
+   <button class='keepBnt bg-color' formType="submit">立即保存</button>
+  
+</view>
+</form>
+<authorize bind:onLoadFun='onLoadFun'></authorize>
+

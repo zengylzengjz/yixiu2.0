@@ -1,0 +1,194 @@
+ /* pages/select/select.wxss */
+ page {
+     background-color: rgb(255,255,255);
+ }
+ 
+ .TeacherAndStudent {
+     width: 100%;
+     height: 260rpx;
+     border-top-left-radius: 1%;
+     border-top-right-radius: 1%;
+     /* background-color: rgb(245, 111, 100); */
+     /* display: block;
+    float: left; */
+     /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; */
+     /* border: springgreen 20rpx solid; */
+ }
+ 
+ text {
+     font-size: 36rpx;
+ }
+ 
+ 
+ .teacher {
+     width: 30%;
+     height: 250rpx;
+     display: block;
+     float: left;
+     margin-left: 50rpx;
+     
+ }
+ 
+ .student {
+     width: 30%;
+     height: 200rpx;
+     display: block;
+     float: right;
+     margin-right: 50rpx;
+     margin-top: 20rpx;
+ }
+ 
+ .profession {
+     display: block;
+     float: left;
+     /* border: thistle 1rpx solid; */
+     width: 750rpx;
+     height: 100rpx;
+     /* background-color: rgb(245, 111, 100); */
+     margin-bottom: 10rpx;
+     border-bottom-left-radius: 5%;
+     border-bottom-right-radius: 5%;
+     /* height: 100rpx; */
+ }
+ 
+ .profession>view>text {
+     display: block;
+     text-align: center;
+ }
+ 
+ .profession_1 {
+     /* border: springgreen 1rpx solid; */
+     width: 38%;
+     float: left;
+ }
+ 
+ .profession_2 {
+     width: 45%;
+     float: right;
+     /* border: springgreen 1rpx solid; */
+ }
+ .gekai{
+     background: rgb(248,248,248);
+     height: 10rpx;
+     width: 750rpx;
+     display: block;
+     float: left;
+ }
+ .select {
+     /* background-color: powderblue; */
+     display: block;
+     float: left;
+     width: 750rpx;
+     height: 250rpx;
+     padding-left: 80rpx;
+     margin-top: 30rpx;
+     /* background-color: rgb(241,50,78); */
+     /* border: #eeba59 3rpx outset; */
+     border-radius: 5%;
+     /* border: teal 2rpx solid; */
+     /* margin-bottom: 50rpx; */
+ }
+ 
+ .select>view {
+     padding-top: 10rpx;
+ }
+ 
+ .select>view>text {
+     display: block;
+     float: left;
+     /* font-size: 40rpx; */
+     margin-bottom: 50rpx;
+ }
+ 
+ .select>view>input {
+     display: block;
+     float: left;
+     width: 400rpx;
+     border: 1rpx solid #0a0a0a;
+     margin-bottom: 50rpx;
+     font-size: 30rpx;
+     padding-left: 5rpx; 
+ }
+  
+ /* .input1 {
+    display: block;
+    float: left;
+    border: 1rpx solid red;
+} */
+ 
+ .part {
+     display: block;
+     float: left;
+     /* border: red 5rpx solid; */
+     width: 750rpx;
+     height: 100rpx;
+ }
+ 
+ .part>view>text {
+     display: block;
+     float: left;
+     /* border: yellow 1rpx solid; */
+ }
+ 
+ .picker {
+     display: block;
+     float: left;
+     width: 400rpx;
+     border: #0a0a00 1rpx solid;
+     font-size: 30rpx;
+     padding:10rpx 0 0 5rpx;
+ }
+ 
+ .picker>text {
+   display: block;
+   float:right;
+   padding:0 8rpx 15rpx 0;
+   
+ }
+ 
+ .some_name {
+     /* background-color: powderblue; */
+     display: block;
+     float: left;
+     width: 750rpx;
+     height: 300rpx;
+     /* margin-bottom: 50rpx; */
+ }
+ 
+ .some_name>view>text {
+     display: block;
+     float: left;
+     /* font-size: 40rpx; */
+     margin-bottom: 50rpx;
+ }
+ 
+ .some_name>view>input {
+     display: block;
+     float: left;
+     width: 360rpx;
+     border: 1rpx solid #0a0a0a;
+     margin-bottom: 50rpx;
+ }
+ 
+ .buttonsub {
+     display: block;
+     float: left;
+     margin-left: 75rpx;
+     /* margin: 0 auto; */
+     width: 600rpx;
+     height: 40rpx;
+     /* text-align: center; */
+     /* height: 40px; */
+     line-height: 40px;
+     /* border: 2rpx solid #0000aa; */
+     /* border-radius: 25%; */
+     /* font-size: 140rpx; */
+     margin-top: 20rpx;
+ }
+ 
+ .buttonsub>button {
+     font-size: 60rpx;
+     /* background-color: green; */
+ }

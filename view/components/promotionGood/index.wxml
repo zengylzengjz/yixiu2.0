@@ -1,0 +1,31 @@
+<view class='promotionGood'>
+    <block wx:for="{{benefit}}" wx:key>
+        <!-- <navigator class='item acea-row row-between-wrapper' url='/pages/goods_details/index?id={{item.id}}'> -->
+        <!-- <navigator class='item acea-row row-between-wrapper' url='/pages/order_confirm/index?cartId={{item}}'> -->
+        <!-- <navigator class='item acea-row row-between-wrapper' > -->
+        <view class='item acea-row row-between-wrapper' bindtap="redirectConfirm" data-index="{{item.id}}">
+            <view class='pictrue'>
+                <image src='{{item.image}}'></image>
+            </view>
+            <view class='text'>
+                <view class='name line1'>{{item.store_name}}</view>
+                <view class='sp-money acea-row'>
+                    <view class='moneyCon'>上门服务一条龙
+                        <!-- <text class='num'>{{item.price}}</text> -->
+                    </view>
+                    <authorize bind:onLoadFun="onLoadFun" isAuto="{{isAuto}}" iShidden="{{iShidden}}"></authorize>
+                </view>
+                <view class='acea-row row-between-wrapper'>
+                    <!-- <view class='money'>日常价：￥{{item.ot_price}}</view>
+                    <view>仅剩：{{item.stock}}{{item.unit_name}}</view> -->
+                </view>
+            </view>
+        </view>
+        <!-- </navigator> -->
+        <!-- <button class='buy bnts' bindtap="goBuy">立即购买</button> -->
+
+        <form bindsubmit="goBuy" report-submit='true'>
+            <!-- <button class='buy bnts' formType="submit">立即购买</button> -->
+        </form>
+    </block>
+</view>

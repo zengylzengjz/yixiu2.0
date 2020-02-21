@@ -1,0 +1,59 @@
+<!--pages/user_printer/index.wxml-->
+<navbar parameter='{{parameter}}'></navbar>
+
+<form bindsubmit="formSubmit" report-submit='true'>
+<view class='addAddress'>
+   <view class='list'> 
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>电脑型号：</view>
+          <input type='text' placeholder='请输入电脑型号' name="com_type" value='{{userComputer.com_type}}' placeholder-class='placeholder'></input>
+      </view>
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>CPU：</view>
+          <input type='text' placeholder='请输入CPU' name="cpu" value='{{userComputer.cpu}}' placeholder-class='placeholder'></input>
+      </view>
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>内存信息：</view>
+          <input type='text' placeholder='请输入内存信息' name="memory_size" value='{{userComputer.memory_size}}' placeholder-class='placeholder'></input>
+      </view>
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>显卡信息：</view>
+          <input type='text' placeholder='请输入显卡信息' name="graphics" value='{{userComputer.graphics}}' placeholder-class='placeholder'></input>
+      </view>
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>硬盘信息：</view>
+          <input type='text' placeholder='请输入硬盘信息' name="hd" value='{{userComputer.hd}}' placeholder-class='placeholder'></input>
+      </view>
+       <view class='item acea-row row-between-wrapper'>
+          <view class='name'>生产日期：</view>
+          <input type='text' placeholder='请输入生产日期' name="pro_date" value='{{userComputer.pro_date}}' placeholder-class='placeholder'></input>
+      </view>
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>保修码：</view>
+          <input type='text' placeholder='请输入保修码' name="sn_code" value='{{userComputer.sn_code}}' placeholder-class='placeholder'></input>
+      </view>
+      
+      <!-->
+      <view class='item acea-row row-between-wrapper'>
+          <view class='name'>所在地区</view>
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class='acea-row row-between-wrapper'>
+              <view class="picker">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+              <view class='iconfont icon-dizhi font-color'></view>
+            </view>
+          </picker>
+      </view>
+      <-->
+        
+   </view>
+   <view class='default acea-row row-middle'>
+      <checkbox-group bindchange='ChangeIsDefault'><checkbox checked="{{userAddress.is_default ? true : false }}"/>设置为默认电脑</checkbox-group>
+   </view>
+   <button class='keepBnt bg-color' formType="submit">立即保存</button>
+   <!-->
+   <view class="wechatAddress" bindtap="getWxAddress">导入微信地址</view>
+<-->
+</view>
+</form>
+<authorize bind:onLoadFun='onLoadFun'></authorize>
+

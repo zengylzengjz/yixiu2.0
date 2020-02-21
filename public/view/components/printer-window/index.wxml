@@ -1,0 +1,19 @@
+<view class="address-window {{printer.printer==true?'on':''}}">
+    <view class='title'>选择打印机<text class='iconfont icon-guanbi' bindtap='close'></text></view>
+    <view class='list'>
+        <view class='item acea-row row-between-wrapper {{active==index?"font-color":""}}' wx:for="{{printerList}}" data-id='{{index}}' bindtap='tapprinter' wx:key data-printerId="{{item.id}}">
+            <text class='iconfont icon-ditu {{active==index?"font-color":""}}'></text>
+            <view class='address'>
+                <view class='name {{active==index?"font-color":""}}'>打印机型号：{{item.printer_type}}<text class='phone'>{{item.phone}}</text></view>
+                <!-- <view class='line1'>显卡信息：{{item.graphics}}硬盘信息：{{item.hd}}生产日期：{{item.pro_date}}保修码：{{item.sn_code}}</view> -->
+            </view>
+            <text class='iconfont icon-complete{{active==index?" font-color":""}}'></text>
+        </view>
+    </view>
+    <!-- 无地址 -->
+    <view class='pictrue' wx:if="{{!is_loading && !printerList.length}}">
+        <image src='/images/noAddress.png'></image>
+    </view>
+    <view class='addressBnt bg-color' bindtap='goPrinterPages'>选择其打印机</view>
+</view>
+<view class='mask' catchtouchmove="true" hidden='{{printer.printer==false}}' bindtap='close'></view>

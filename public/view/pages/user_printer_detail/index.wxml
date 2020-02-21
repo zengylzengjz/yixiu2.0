@@ -1,0 +1,40 @@
+<!--pages/user_printer_detail/index.wxml-->
+<!-- <navbar parameter='{{parameter}}'></navbar> -->
+ <view class='address-management'>
+ <view class='line'>
+<view class="item2" wx:if="{{userPrinter[0].type.length>0}}">打印机<text class="item1">{{userPrinter[0].type}}</text>维修记录</view>
+ <view class='item' wx:for="{{userPrinter}}" data-index="{{index}}" wx:key>
+          <view class='address'  data-id="{{item.id}}" bindtap='goOrder'>
+           <!-- <view class='consignee'>订单状态：<text>{{item.order_id}}</text></view> -->
+            <view class='consignee'>订单号：<text>{{item.order_id}}</text></view>
+            <view class='consignee'>预约时间：<text>{{item.add_time}}</text></view>
+            <view class='consignee'>地址：<text>{{item.user_address}}</text></view>
+            <view class='consignee' wx:if='{{item.delivery_type=="fictitious" }}'>
+            <view>维修方式：<text class='item3'>到店维修</text></view></view>
+            <view class='consignee' wx:elif='{{item.delivery_type=="express"}}'>
+            <view>维修方式：<text class='item3'>上门维修</text></view></view>
+            <view class='consignee' wx:if='{{item.delivery_name!=null}}'>维修员：<text>{{item.delivery_name}}</text></view>
+            <view class='consignee' wx:if='{{item.delivery_id!=null}}'>维修员电话：<text>{{item.delivery_id}}</text></view>
+            <view class='consignee'>打印机问题描述：<text>{{item.mark}}</text></view>
+            <view class='consignee' wx:if='{{item.total_price!=0.00}}'>维修金额：<text>{{item.pay_price}}</text></view>
+             <view class='consignee' wx:if='{{item.remark!=null}}'>处理详情：<text>{{item.remark}}</text></view>
+
+           </view>
+          </view>
+      </view>
+<view class='address-management'>
+          <view class='line'><image src='/images/line.jpg' wx:if='{{msg!="ok"}}'></image></view> 
+          <!-- <view>
+<view wx:if='{{msg!="ok"}}'><view><image src='/images/noComputerRecord.png' class="image"></image></view></view>
+</view> -->
+      </view>
+
+       <view class='noCommodity' wx:if='{{msg!="ok"}}' style="background-color:#fff">
+      <view class='pictrue'><image src='/images/noPrinterRecord.png'></image></view>
+   </view>
+</view>
+
+
+
+<authorize bind:onLoadFun='onLoadFun'></authorize>
+

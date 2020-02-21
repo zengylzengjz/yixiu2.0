@@ -1,0 +1,43 @@
+<!--pages/select/select.wxml-->
+<!-- <button>wocaonima</button> -->
+<form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="TeacherAndStudent">
+        <input hidden type="text" value="{{flag}}" name="flag"></input>
+        <view>
+            <cover-image src="{{imgArray}}" class="teacher" bindtap="teacher"></cover-image>
+        </view>
+        <view>
+            <cover-image src="{{imagesArray}}" class="student" bindtap="student"></cover-image>
+        </view>
+    </view>
+    <view class="profession">
+        <view class="profession_1"><text>老师</text></view>
+        <view class="profession_2"><text>学生</text></view>
+    </view>
+    <view class="gekai"></view>
+    <view class="select">
+        <view>
+            <text>工/学号：</text><input type="Number" placeholder="学/工号" focus="true" placeholder-class="input1-placehoder" name="school_num"></input>
+        </view>
+        <view class="part">
+            <view>
+                <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;&nbsp;学院：&nbsp;</text>
+            </view>
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" mode="selector" name="college">
+                <view class="picker">
+                    {{objectArray[index]}}<text decode="{{true}}">▼</text>
+                </view>
+            </picker>
+        </view>
+        <!-- <view class="some_name">
+            <view>
+                <text decode="{{true}}"> &nbsp;&nbsp;&nbsp;&nbsp;姓名：&nbsp;</text><input type="text" placeholder="姓名" focus="true" placeholder-class="input1-placehoder" name="some_name"></input>
+            </view>
+        </view> -->
+    </view>
+    <!-- <button>nidaye</button> -->
+    <view class="buttonsub">
+        <button type="default" plain="true" form-type="submit" hover-class="button-hover" style="width:600rpx;height:75rpx;font-size:20px;">确定</button>
+    </view>
+</form>
+<!-- <button>nidaye有点无语</button> -->

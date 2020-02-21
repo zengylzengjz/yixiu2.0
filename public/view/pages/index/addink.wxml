@@ -1,0 +1,37 @@
+<!--pages/index/addink.wxml-->
+<view>
+<text class="text">请输入相关内容（一键加墨）</text>
+<form bindsubmit="formSubmit" bindreset="formReset">
+
+
+
+
+<view class="section" >  
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{objectArray}}" mode = "selector" name="building">  
+    <view class="picker">  
+      楼栋：{{objectArray[index]}}  
+    </view>  
+  </picker>
+</view>  
+
+
+
+
+<view class="section">
+<input type="text" name="roomid" placeholder="房间号:"></input>
+</view>
+
+<view class="section">
+<input type="text" name="printer" placeholder="打印机型号:"></input>
+</view>
+
+<view class="section">
+<input type="text" name="description" placeholder="问题描述（选填）："></input>
+</view>
+
+
+<view class="buttonsub">
+<button type="primary" form-type="submit" >提交</button>
+</view>
+</form>
+</view>

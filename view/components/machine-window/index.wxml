@@ -1,0 +1,19 @@
+<view class="address-window {{machine.machine==true?'on':''}}">
+    <view class='title'>选择电脑<text class='iconfont icon-guanbi' bindtap='close'></text></view>
+    <view class='list'>
+        <view class='item acea-row row-between-wrapper {{active==index?"font-color":""}}' wx:for="{{machineList}}" data-id='{{index}}' bindtap='tapmachine' wx:key data-machineId="{{item.id}}">
+            <text class='iconfont icon-ditu {{active==index?"font-color":""}}'></text>
+            <view class='address'>
+                <view class='name {{active==index?"font-color":""}}'>电脑型号：{{item.com_type}}<text class='phone'>CPU：{{item.cpu}}</text></view>
+                <view class='line1'>显卡信息：{{item.graphics}}硬盘信息：{{item.hd}}生产日期：{{item.pro_date}}保修码：{{item.sn_code}}</view>
+            </view>
+            <text class='iconfont icon-complete{{active==index?" font-color":""}}'></text>
+        </view>
+    </view>
+    <!-- 无地址 -->
+    <view class='pictrue' wx:if="{{!is_loading && !machineList.length}}">
+        <image src='/images/noAddress.png'></image>
+    </view>
+    <view class='addressBnt bg-color' bindtap='goMachinePages'>选择其电脑</view>
+</view>
+<view class='mask' catchtouchmove="true" hidden='{{machine.machine==false}}' bindtap='close'></view>
